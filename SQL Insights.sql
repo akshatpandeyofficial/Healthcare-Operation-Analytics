@@ -126,12 +126,22 @@ group by age_group
 order by Total_Patients desc;
 
 
+#Patient Count of Medcial Condition As per Admission Type 
+
+select `Medical Condition`,`Admission Type`,count(*) as patient_count,round(avg(`Billing Amount`),2) as AVG_Billing
+from cleaned_healthcare
+group by `Medical Condition` , `Admission Type`
+order by patient_count desc;
 
 
-
-
-
-
+#
+SELECT 
+    doctor,
+    COUNT(*) AS patient_count
+FROM cleaned_healthcare
+GROUP BY doctor
+ORDER BY patient_count DESC
+LIMIT 10;
 
 
 
