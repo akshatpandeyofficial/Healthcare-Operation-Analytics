@@ -35,7 +35,18 @@ group by hospital
 order by total_billing desc;
 
 
+# Hospital Having Most Number of Patients 
+select hospital, count(*) as Total_patient
+from cleaned_healthcare
+group by hospital
+order by Total_patient desc;
 
+
+#Average Billing by Admission Type 
+select `Admission Type`, round(avg(`Billing Amount`)) as Avg_billing
+from cleaned_healthcare
+group by `Admission Type`
+order by Avg_billing desc;
 
 
 
