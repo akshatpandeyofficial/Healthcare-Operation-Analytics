@@ -16,11 +16,23 @@ from cleaned_healthcare
 group by Gender
 order by patient_count Desc;
 
+#Total Number of Patient As Per Medical Condition 
+select `Medical Condition`,count(*) as Total_Patients 
+from cleaned_healthcare
+group by `Medical Condition`
+order by Total_patients;
 
+#Average Billing Amount as per Medical Condition
+SELECT `Medical Condition`,round(AVG(`Billing Amount`),2) AS Avg_Amount
+FROM cleaned_healthcare
+GROUP BY `Medical Condition`
+ORDER BY Avg_Amount;
 
-
-
-
+#Average Billing as Per Hospital
+select hospital , round(sum(`Billing amount`),2) as total_billing
+from cleaned_healthcare
+group by hospital
+order by total_billing desc;
 
 
 
