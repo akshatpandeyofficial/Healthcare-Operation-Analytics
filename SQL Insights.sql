@@ -134,8 +134,7 @@ order by patient_count desc;
 
 
 #Doctor Handeling Most Patients
-SELECT 
-doctor,
+SELECT doctor,
 COUNT(*) AS patient_count
 FROM cleaned_healthcare
 GROUP BY doctor
