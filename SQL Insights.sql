@@ -136,8 +136,8 @@ order by patient_count desc;
 
 #
 SELECT 
-    doctor,
-    COUNT(*) AS patient_count
+doctor,
+COUNT(*) AS patient_count
 FROM cleaned_healthcare
 GROUP BY doctor
 ORDER BY patient_count DESC
