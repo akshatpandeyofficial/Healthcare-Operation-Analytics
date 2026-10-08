@@ -134,7 +134,7 @@ group by `Medical Condition` , `Admission Type`
 order by patient_count desc;
 
 
-#
+#Doctor Handeling Most Patients
 SELECT 
 doctor,
 COUNT(*) AS patient_count
