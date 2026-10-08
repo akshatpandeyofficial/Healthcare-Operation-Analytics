@@ -95,8 +95,20 @@ select round(avg(`Staying Length`),2) as Avg_Staying_Length
 from cleaned_healthcare;
 
 
-#
+#Average Stay As Per Medical Condition
+select * from cleaned_healthcare;
 
+select `Medical Condition` , round(avg(`Staying Length`)) as Average_Stay
+from cleaned_healthcare
+group by `Medical Condition`
+order by Average_Stay desc;
+
+# Highest Billed Patients
+select 
+`Name`, Age, Gender, `Blood Type`,`Medical Condition`,Hospital,`Billing Amount`
+from cleaned_healthcare
+order by `Billing Amount` desc
+Limit 20;
 
 
 
