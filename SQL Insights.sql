@@ -111,9 +111,19 @@ order by `Billing Amount` desc
 Limit 20;
 
 
-
-
-
+#Age Group Having Most Patients
+select 
+case
+when age < 18 then '0-17'
+when age between 18 AND 30 then '18-30'
+when age between 30 AND 50 then '30-50'
+when age between 50 AND 70 then '50-70'
+else '70+'
+END AS Age_group,
+count(*) as Total_Patients
+from cleaned_healthcare
+group by age_group
+order by Total_Patients desc;
 
 
 
