@@ -127,7 +127,6 @@ order by Total_Patients desc;
 
 
 #Patient Count of Medcial Condition As per Admission Type 
-
 select `Medical Condition`,`Admission Type`,count(*) as patient_count,round(avg(`Billing Amount`),2) as AVG_Billing
 from cleaned_healthcare
 group by `Medical Condition` , `Admission Type`
