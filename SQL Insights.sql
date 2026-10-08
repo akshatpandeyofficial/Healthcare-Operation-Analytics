@@ -49,9 +49,21 @@ group by `Admission Type`
 order by Avg_billing desc;
 
 
+#select Statemnt
+select * from cleaned_healthcare;
+
+#Patient By Insurance Provider
+select `Insurance Provider` , count(*) as Total_Patient
+from cleaned_healthcare
+group by `Insurance Provider`
+order by Total_Patient desc;
 
 
-
+#Revenue By Insurance Provider
+select `Insurance Provider` , round(sum(`Billing Amount`),2) as Revenue
+from cleaned_healthcare
+group by `Insurance Provider`
+order by Revenue desc;
 
 
 
