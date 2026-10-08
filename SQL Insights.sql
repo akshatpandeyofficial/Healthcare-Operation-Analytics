@@ -65,9 +65,37 @@ from cleaned_healthcare
 group by `Insurance Provider`
 order by Revenue desc;
 
+#Prescribed Medication
+
+select Medication , count(*) as Prescribed_people
+from cleaned_healthcare
+group by Medication
+order by Prescribed_people desc;
+
+#Patients As per Test Results
+select `Test Results`, count(*) as Patients
+from cleaned_healthcare
+group by `Test Results`
+order by Patients desc;
+
+select * from cleaned_healthcare; 
+
+#Admissions Trends Over time
+select
+year(`Date of Admission`) as Year,
+month(`Date of Admission`) as month,
+count(*) as admissions
+from cleaned_healthcare
+group by year(`Date of Admission`),month(`Date of Admission`)
+order by year,month;
+
+#average length of stay 
+
+select round(avg(`Staying Length`),2) as Avg_Staying_Length
+from cleaned_healthcare;
 
 
-
+#
 
 
 
